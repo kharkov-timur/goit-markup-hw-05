@@ -383,6 +383,7 @@ ul {
 .portfolio-card-text {
   padding: 32px 16px;
   border: 1px solid var(--card-border-color);
+  color: #2e2f42;
 }
 
 .filter-items {
