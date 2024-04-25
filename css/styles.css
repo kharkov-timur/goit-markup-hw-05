@@ -608,6 +608,7 @@ ul {
 .comment-input {
   resize: none;
   padding-left: 16px;
+  margin-bottom: 8px;
 }
 
 .policy-label {
