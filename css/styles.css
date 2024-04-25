@@ -37,6 +37,7 @@ button {
   border: none;
   padding: 12px 24px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 ul {
@@ -454,7 +455,7 @@ ul {
 }
 
 .footer-text {
-  max-width: 264px;
+  min-width: 264px;
 }
 
 .footer-social-title {
@@ -469,6 +470,42 @@ ul {
 }
 
 .footer .card-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-form {
+  width: 100%;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+
+.subscribe-form .form-input {
+  height: 40px;
+  background-color: var(--primary-sections-background-color);
+  color: var(--background-color);
+  padding-left: 16px;
+  border-color: var(--background-color);
+  width: 100%;
+}
+
+.subscribe-form .form-input::placeholder {
+  color: var(--background-color);
+}
+
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+}
+
+.button-icon {
   width: 24px;
   height: 24px;
 }
@@ -534,16 +571,19 @@ ul {
   border-radius: 4px;
   font-size: 12px;
   width: 100%;
-  transition-property: outline-color;
+  outline: none;
+  transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input:focus-visible {
-  outline-color: #4d5ae5;
+.input:focus-visible,
+.input:hover {
+  border-color: #4d5ae5;
 }
 
-.input:focus-visible + .form-input-icon {
+.input:focus-visible + .form-input-icon,
+.input:hover + .form-input-icon {
   fill: #404bbf;
 }
 
@@ -600,6 +640,10 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.policy-checkbox:focus ~ .checkmark {
+  border-color: #4d5ae5;
+}
+
 .policy-label .policy-checkbox:checked ~ .checkmark {
   background-color: #4d5ae5;
   border: none;
@@ -608,6 +652,10 @@ ul {
 .policy-label:hover .policy-checkbox ~ .checkmark,
 .policy-label:focus .policy-checkbox ~ .checkmark {
   border-color: #4d5ae5;
+}
+
+.policy-link {
+  color: #4d5ae5;
 }
 
 .checkmark-icon {
